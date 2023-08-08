@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "rotate-camera-command",
+	"version": "${version}",
+	"name": "Rotate Camera Command",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/rotate-camera-command/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+          "me.horeatise.RotateCamera"
+		],
+		"client": [
+			"me.horeatise.RotateCameraClient"
+		],
+		"fabric-datagen": [
+			"me.horeatise.RotateCameraDataGenerator"
+		]
+	},
+	"mixins": [
+		"rotate-camera-command.mixins.json",
+		{
+			"config": "rotate-camera-command.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.22",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
